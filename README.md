@@ -1,3 +1,32 @@
+# Description
+## Password Strength App
+
+### Calculation the strength of a password:
+1. Only letters/digits/symbols - the password is easy;
+2. Combination of letters-symbols/letters-digits/digits-symbols - the password is medium;
+3. Has letters, symbols and numbers - the password is strong;
+
+### The color of the three sections under the password field will depend on the strength of the password:
+1. If the field is empty, all sections are gray;
+2. If the field has less than 8 characters, all sections are red;
+3. If the password is easy - the first section is red the rest are gray;
+4. If the password is medium - the first two sections are yellow the last one is gray;
+5. If the password is strong, all sections are green;
+
+![screen](public/screen.png)
+
+[Published Project Link](https://klamkov.github.io/password-strength-app/)
+
+___
+___
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
