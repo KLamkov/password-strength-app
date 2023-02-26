@@ -5,12 +5,10 @@ import PasswordStrengthCheck from "./components/PasswordStrengthCheck";
 import './App.css';
 
 
-function App() {
-const [ password, setPassword] = useState('')
-console.log(password)
+function App(){
+const [password, setPassword] = useState('');
 
-
-return (
+return(
 	<div className="container">
 		<div className='password-group'>
 			<h3>Enter the Password</h3>

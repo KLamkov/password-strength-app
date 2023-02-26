@@ -8,24 +8,25 @@ const PasswordStrengthCheck = ({password}) => {
         const hasLetters = /[a-zA-Z]/.test(password);
         const hasDigits = /\d/.test(password);
         const hasSymbols = /[^\w\s]/.test(password);
-        
-        if (password.length == 0) {
-            return "empty"
-        } else if (password.length < 8) {
-            return "wrong"
-        } else if ((!hasLetters && hasDigits && hasSymbols) ||
-                (hasLetters && !hasDigits && hasSymbols) ||
-                (hasLetters && hasDigits && !hasSymbols)) {
-        return "medium";
-        } else  if ( hasDigits && hasLetters && hasSymbols){
-        return "strong";
-        } else {
-            return "easy"
+    
+        switch (true) {
+        case password.length == 0:
+            return "empty";
+        case password.length < 8:
+            return "wrong";
+        case (!hasLetters && hasDigits && hasSymbols) ||
+            (hasLetters && !hasDigits && hasSymbols) ||
+            (hasLetters && hasDigits && !hasSymbols):
+            return "medium";
+        case hasDigits && hasLetters && hasSymbols:
+            return "strong";
+        default:
+            return "easy";
         }
     }
-    const PasswordStrength = getPasswordStrength(password)
     
-
+    const PasswordStrength = getPasswordStrength(password);
+    
     useEffect(() => {
         const barOne = document.querySelector(".bar-one");
         const barTwo = document.querySelector(".bar-two");
@@ -58,7 +59,7 @@ const PasswordStrengthCheck = ({password}) => {
         } else {
             console.error("Invalid password strength")
         }
-    }, [PasswordStrength])    
+    }, [PasswordStrength]);
 
     return (
         <div className='progress-bars'>
@@ -69,4 +70,4 @@ const PasswordStrengthCheck = ({password}) => {
     )
 }
 
-export default PasswordStrengthCheck
+export default PasswordStrengthCheck;
