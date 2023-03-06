@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import PasswordStrengthCheck from "./components/PasswordStrengthCheck";
+import PasswordStrengthCheck from "./components/PasswordStrengthCheck/PasswordStrengthCheck";
+import PasswordInput from "./components/PasswordInput/PasswordInput";
 
 import './App.css';
 
@@ -10,17 +11,10 @@ const [password, setPassword] = useState('');
 
 return(
 	<div className="container">
-		<div className='password-group'>
-			<h3>Enter the Password</h3>
-			<input type="password" 
-				className="password-input" 
-				placeholder="Password"
-				onChange={(event) => {
-					setPassword(event.target.value);
-				}}/>
+			<PasswordInput setPassword={setPassword}/>
 			<PasswordStrengthCheck password={password}/>
-		</div>
 	</div>
+
 );
 }
 
