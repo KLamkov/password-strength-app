@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/password-strength-app/static/css/main.9f521021.css",
-    "main.js": "/password-strength-app/static/js/main.7abe1fca.js",
+    "main.css": "/password-strength-app/static/css/main.092e24ba.css",
+    "main.js": "/password-strength-app/static/js/main.771848c7.js",
     "index.html": "/password-strength-app/index.html",
-    "main.9f521021.css.map": "/password-strength-app/static/css/main.9f521021.css.map",
-    "main.7abe1fca.js.map": "/password-strength-app/static/js/main.7abe1fca.js.map"
+    "main.092e24ba.css.map": "/password-strength-app/static/css/main.092e24ba.css.map",
+    "main.771848c7.js.map": "/password-strength-app/static/js/main.771848c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f521021.css",
-    "static/js/main.7abe1fca.js"
+    "static/css/main.092e24ba.css",
+    "static/js/main.771848c7.js"
   ]
 }
